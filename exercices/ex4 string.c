@@ -1,22 +1,26 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char chaine1[100];
-    char chaine2[100];
+ 
+int main()
+{
+    char str[100], rev[100];
+    int t, i, j;
+ 
+    printf(" Entrez une chaîne de caractere :  ");
+    gets(str);
     
-    printf("taper la premiere chaine: ");
-    gets(  chaine1);
-
-    printf("taper la deuxieme chaine: ");
-    gets(  chaine2);
+    j = 0;
+    t = strlen(str);
+ 
+    rev[t] = '\0';
+    for (i = t - 1; i >= 0; i--)
+    {
+      rev[j++] = str[i];
+    }
+    rev[i] = '\0';
+ 
+    printf(" Chaîne de caractere apres inversion = %s", rev);
     
-    
-    strcat(chaine1, chaine2);
-    
-    printf("apres la cancatenation:  %s\n", chaine1);
-
-    
-
     return 0;
 }
